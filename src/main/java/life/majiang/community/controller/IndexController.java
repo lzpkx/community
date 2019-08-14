@@ -8,11 +8,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 //哇允许这个类去接受前端的一个请求
 @Controller
-public class HelloController {
-    @GetMapping("/hello")
-    public String hello(@RequestParam(name = "name") String name, Model model){
-        model.addAttribute("name",name);
-        return "hello";
+public class IndexController {
+    @GetMapping("/")
+    public String index(){
+        return "index";
     }
+//    public String hello(@RequestParam(name = "name") String name, Model model){
+//        model.addAttribute("name",name);
+//        return "index";
+//    }
 
 }
